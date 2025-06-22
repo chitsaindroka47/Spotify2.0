@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { fetchTopCharts } from '../utils/api';
 import SongCard from '../components/SongCard';
@@ -22,21 +23,21 @@ const Home = () => {
 
     const loadArtists = async () => {
       try {
-        const response = await axios.get('https://api.deezer.com/chart/0/artists');
+        const response = await axios.get('https://spotify2-api.onrender.com/api/artists');
         setArtists(response.data.data);
       } catch (err) {
         console.error('Artist API Error:', err.message);
       }
     };
 
-   const loadBollywood = async () => {
-  try {
-    const response = await axios.get('http://localhost:5000/api/bollywood');
-    setBollywoodTracks(response.data.data);
-  } catch (err) {
-    console.error('Bollywood API Error:', err.message);
-  }
-};
+    const loadBollywood = async () => {
+      try {
+        const response = await axios.get('https://spotify2-api.onrender.com/api/bollywood');
+        setBollywoodTracks(response.data.data);
+      } catch (err) {
+        console.error('Bollywood API Error:', err.message);
+      }
+    };
 
     loadTracks();
     loadArtists();
@@ -88,7 +89,6 @@ const Home = () => {
       <main className="home-main">
         <h2>🔥 Top Charts</h2>
         <div className="scroll-section">
-          {/* <button className="scroll-btn left" onClick={() => scrollLeft('tracks-row')}>‹</button> */}
           <div className="scroll-row" id="tracks-row">
             {tracks.map((track) => (
               <SongCard key={track.id} track={track} />
@@ -112,7 +112,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-{/* 
+
         <h2>🎶 Bollywood Melodies</h2>
         <div className="scroll-section">
           <button className="scroll-btn left" onClick={() => scrollLeft('bollywood-row')}>‹</button>
@@ -122,8 +122,7 @@ const Home = () => {
             ))}
           </div>
           <button className="scroll-btn right" onClick={() => scrollRight('bollywood-row')}>›</button>
-        </div> */}
-
+        </div>
       </main>
     </div>
   );
