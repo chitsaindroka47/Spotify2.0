@@ -1,0 +1,207 @@
+
+.home-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  background: #181818;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  color: #fff;
+}
+
+.sidebar h3 {
+  margin-bottom: 20px;
+}
+
+.library-card {
+  background: #242424;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.library-card h4 {
+  margin-bottom: 8px;
+}
+
+.library-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.white-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.white-btn:hover {
+  background: #e6e6e6;
+}
+
+.sidebar-footer {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid #888;
+  border-radius: 20px;
+  padding: 6px 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  border-color: #fff;
+}
+
+.home-main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Horizontal scroll for Top Charts */
+.songs-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  scroll-behavior: smooth;
+  padding-right: 40px;
+}
+
+.songs-row::-webkit-scrollbar {
+  display: none;
+}
+
+.song-card {
+  min-width: 180px;
+  max-width: 200px;
+  flex: 0 0 auto;
+}
+
+.artists-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  padding-right: 40px;
+  scroll-behavior: smooth;
+}
+
+.artists-row::-webkit-scrollbar {
+  display: none;
+}
+
+.artist-card {
+  flex: 0 0 auto;
+  text-align: center;
+  width: 100px;
+  color: #fff;
+}
+
+.artist-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  border: 2px solid #444;
+}
+
+.artist-name {
+  font-size: 0.9rem;
+}
+.scroll-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.scroll-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  padding: 10px 40px;
+  flex: 1;
+}
+
+.scroll-row::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(34, 34, 34, 0.9);
+  border: none;
+  color: #fff;
+  font-size: 36px; /* larger size */
+  padding: 14px 20px; /* bigger button */
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}

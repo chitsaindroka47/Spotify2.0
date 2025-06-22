@@ -1,0 +1,151 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #000000, #1c1c1c);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #222;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.logo {
+  max-height: 40px;
+  width: auto;
+  max-width: 150px;
+}
+
+.logo-link {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.nav-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #1db954;
+}
+
+.search-form {
+  flex-grow: 1;
+  max-width: 400px;
+  min-width: 200px;
+  margin: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 5px 12px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+.search-input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+.search-input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.15);
+}
+
+.signup-btn {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+.signup-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.login-btn {
+  padding: 8px 18px;
+  margin-right:70px;
+  border-radius: 20px;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.login-btn:hover {
+  background: #e6e6e6;
+}
+
+.install-app {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.install-app:hover {
+  color: #1db954;
+}
+
+.download-icon {
+  font-size: 1.2rem;
+}
+
+.install-text {
+  font-size: 0.95rem;
+  font-style: bold;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 15px;
+  }
+
+  .navbar-left, .navbar-right {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .search-form {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+   .signup-btn {
+    margin-top: 8px;
+  }
+  .login-btn{
+    padding-left:1rem;
+    margin-top: 8px;
+  }
+}
+
+.navbar-right{
+  margin-left: 100px;
+}

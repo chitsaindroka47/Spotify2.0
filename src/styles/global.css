@@ -1,0 +1,41 @@
+/* Full-screen black base with a soft white gradient at top */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0,0.8) 0%,
+    rgb(0, 0, 0,1) 15%,
+    rgba(0,0,0,1)100%
+  );
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* For the main container covering full viewport */
+.app, .home-container {
+  background: transparent;
+}
+
+/* Ensure track cards blend elegantly */
+.track-list {
+  padding: 40px;
+}
+.track-card {
+  background: #121212;
+  border: 1px solid #222;
+}
+.track-card:hover {
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+/* If you have a navbar/sidebar */
+.navbar, .sidebar {
+  background: #111;
+  border-bottom: 1px solid #222;
+}
+
+/* src/styles/global.css */
+.app-container {
+  padding-top: 60px; /* equal to navbar height */
+}

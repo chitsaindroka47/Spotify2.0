@@ -1,0 +1,9 @@
+.search-container {
+  padding: 20px;
+}
+
+.songs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
