@@ -12,9 +12,9 @@ const Home = () => {
   const [bollywoodTracks, setBollywoodTracks] = useState([]);
 
   useEffect(() => {
-    const loadTracks = async () => {
+   const loadTracks = async () => {
       try {
-        const data = await fetchTopCharts();
+        const data = await fetchTopCharts(); 
         setTracks(data);
       } catch (err) {
         console.error('API Error:', err.message);
@@ -22,23 +22,22 @@ const Home = () => {
     };
 
     const loadArtists = async () => {
-      try {
-        const response = await axios.get('https://spotify2-api.onrender.com/api/artists');
-        setArtists(response.data.data);
-      } catch (err) {
-        console.error('Artist API Error:', err.message);
-      }
-    };
+  try {
+    const response = await axios.get('/api/artists');
+    setArtists(response.data.data);
+  } catch (err) {
+    console.error('Artist API Error:', err.message);
+  }
+};
 
-    const loadBollywood = async () => {
-      try {
-        const response = await axios.get('https://spotify2-api.onrender.com/api/bollywood');
-        setBollywoodTracks(response.data.data);
-      } catch (err) {
-        console.error('Bollywood API Error:', err.message);
-      }
-    };
-
+const loadBollywood = async () => {
+  try {
+    const response = await axios.get('/api/bollywood');
+    setBollywoodTracks(response.data.data);
+  } catch (err) {
+    console.error('Bollywood API Error:', err.message);
+  }
+};
     loadTracks();
     loadArtists();
     loadBollywood();

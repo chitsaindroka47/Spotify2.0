@@ -7,7 +7,8 @@ const app = express();
 
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://spotify2-0-jade.vercel.app']
+  origin: ['http://localhost:3000', 'https://spotify2-0-jade.vercel.app'],
+  methods: ['GET', 'POST', 'OPTIONS'],
 }));
 
 
