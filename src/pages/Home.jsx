@@ -113,7 +113,7 @@ const Home = () => {
           </div>
         </div>
 
-        <h2>🎶 Bollywood Melodies</h2>
+        {/* <h2>🎶 Bollywood Melodies</h2>
         <div className="scroll-section">
           <button className="scroll-btn left" onClick={() => scrollLeft('bollywood-row')}>‹</button>
           <div className="scroll-row" id="bollywood-row">
@@ -122,7 +122,7 @@ const Home = () => {
             ))}
           </div>
           <button className="scroll-btn right" onClick={() => scrollRight('bollywood-row')}>›</button>
-        </div>
+        </div> */}
       </main>
     </div>
   );
